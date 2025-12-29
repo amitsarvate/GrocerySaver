@@ -2,6 +2,8 @@
 
 This file is the source of truth for the work backlog. Each top-level checkbox maps to a GitHub Issue. Subtasks are the “doable steps” you can ask me to complete one-by-one.
 
+To publish/update these as GitHub Milestones + Issues, use `scripts/github_bootstrap.sh` (requires `gh auth login`).
+
 ## Milestone: Phase 0 — Foundations
 - [ ] P0-01 Scaffold Next.js app
   - [ ] Initialize Next.js (App Router, TypeScript)
@@ -254,4 +256,3 @@ This file is the source of truth for the work backlog. Each top-level checkbox m
   - [ ] Add incident runbook for scraper breakage
   - Acceptance:
     - A newcomer can add a new store scraper using docs alone
-
