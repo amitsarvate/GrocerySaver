@@ -10,6 +10,7 @@
 - Data: PostgreSQL (+ PostGIS for geospatial); Redis for caching recent queries and store lookups.
 - Scraping/ingestion: Playwright (headless), Cheerio for lightweight HTML parsing; cron via hosted scheduler (e.g., Vercel cron) or a worker.
 - Deployment: Continuous preview/staging URLs on every main branch and PR (e.g., Vercel) so progress is visible live during development.
+- Local hosting: Docker + Docker Compose to run app + DB (Postgres/PostGIS) + Redis locally with a single command.
 - Geodata: OpenStreetMap/Nominatim or Places API for geocoding + Overpass API for grocery store discovery (top 5 closest); simple haversine distance with optional OSRM/Mapbox Matrix if needed.
 - Auth/identity (later): NextAuth/Auth.js or Clerk if accounts are needed.
 - Observability: pino/logger, Logflare/Axiom/Sentry for errors.

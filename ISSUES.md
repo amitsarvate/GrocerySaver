@@ -53,6 +53,14 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - Every PR creates a preview URL
     - Main branch deploys automatically
 
+- [ ] P0-07 Docker local hosting (app + DB + cache)
+  - [ ] Add `docker-compose.yml` with Postgres/PostGIS and Redis
+  - [ ] Add app `Dockerfile` (dev-friendly) + `.dockerignore`
+  - [ ] Document local startup commands (compose up/down, reset volumes)
+  - Acceptance:
+    - `docker compose up -d db redis` starts local infra
+    - App can run locally using the dockerized DB/Redis connection strings
+
 ## Milestone: Phase 1 — Location & Store Discovery
 - [ ] P1-01 Geocoding provider integration ([#7](https://github.com/amitsarvate/GrocerySaver/issues/7))
   - [ ] Choose provider (Nominatim/Mapbox/Google)
