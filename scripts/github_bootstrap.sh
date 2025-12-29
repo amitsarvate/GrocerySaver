@@ -27,6 +27,7 @@ require_cmd() {
 
 require_cmd gh
 require_cmd git
+require_cmd python3
 
 if ! gh auth status -h github.com >/dev/null 2>&1; then
   echo "GitHub CLI is not authenticated. Run: gh auth login" >&2
@@ -127,5 +128,53 @@ done < "${ISSUES_FILE}"
 
 flush_issue
 
-echo "Done."
+echo "Syncing issue numbers/links into ISSUES.md..."
 
+export ROOT_DIR
+export REPO
+
+python3 - <<'PY'
+import json
+import os
+import re
+import subprocess
+from pathlib import Path
+
+root_dir = Path(os.environ["ROOT_DIR"])
+issues_file = root_dir / "ISSUES.md"
+repo = os.environ["REPO"]
+
+issues_json = subprocess.check_output(
+    ["gh", "issue", "list", "-R", repo, "--limit", "500", "--json", "number,title,url"],
+    text=True,
+)
+issues = json.loads(issues_json)
+by_title = {i["title"]: (i["number"], i["url"]) for i in issues}
+
+lines = issues_file.read_text(encoding="utf-8").splitlines(True)
+out = []
+
+top_issue_re = re.compile(r"^- \[ \] (.+)$")
+
+for line in lines:
+    m = top_issue_re.match(line.rstrip("\n"))
+    if not m:
+        out.append(line)
+        continue
+
+    title = m.group(1)
+    # Already linked / numbered
+    if "([#" in title or "(#" in title:
+        out.append(line)
+        continue
+
+    if title in by_title:
+        num, url = by_title[title]
+        out.append(f"- [ ] {title} ([#{num}]({url}))\n")
+    else:
+        out.append(line)
+
+issues_file.write_text("".join(out), encoding="utf-8")
+PY
+
+echo "Done."
