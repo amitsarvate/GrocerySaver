@@ -61,8 +61,12 @@ echo "Using repo: ${REPO}"
 
 milestone_exists() {
   local title="$1"
-  gh api -H "Accept: application/vnd.github+json" "repos/${REPO}/milestones?state=all&per_page=100" \
-    --jq ".[] | select(.title==\"${title}\") | .number" >/dev/null
+  local number
+  number="$(
+    gh api -H "Accept: application/vnd.github+json" "repos/${REPO}/milestones?state=all&per_page=100" \
+      --jq ".[] | select(.title==\"${title}\") | .number" 2>/dev/null || true
+  )"
+  [[ -n "${number}" ]]
 }
 
 ensure_milestone() {
