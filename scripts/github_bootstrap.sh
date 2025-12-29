@@ -121,6 +121,10 @@ while IFS='' read -r line || [[ -n "${line}" ]]; do
   if [[ "${line}" =~ ^-\ \[\ \]\ (.+)$ ]]; then
     flush_issue
     current_title="${BASH_REMATCH[1]}"
+    # If the title already contains a synced GitHub link suffix like:
+    # "Thing to do ([#123](https://github.com/...))"
+    # strip it so re-running this script does not create duplicate issues.
+    current_title="${current_title%% ([#*}"
     current_body="Milestone: ${current_milestone}\n\n${line}"
     continue
   fi

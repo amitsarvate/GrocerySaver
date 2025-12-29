@@ -53,7 +53,7 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - Every PR creates a preview URL
     - Main branch deploys automatically
 
-- [ ] P0-07 Docker local hosting (app + DB + cache)
+- [ ] P0-07 Docker local hosting (app + DB + cache) ([#43](https://github.com/amitsarvate/GrocerySaver/issues/43))
   - [ ] Add `docker-compose.yml` with Postgres/PostGIS and Redis
   - [ ] Add app `Dockerfile` (dev-friendly) + `.dockerignore`
   - [ ] Document local startup commands (compose up/down, reset volumes)
