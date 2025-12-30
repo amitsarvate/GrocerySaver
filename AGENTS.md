@@ -5,6 +5,7 @@ Build a grocery savings web app that recommends the most cost- and distance-effi
 
 ## Always Check
 - Read `plan.md` and `ISSUES.md` before work; confirm the current milestone and issue.
+- After completing any task/issue: update `ISSUES.md` (checkboxes and links) and update the corresponding GitHub issue (close it or comment with what changed).
 - Keep changes minimal and scoped to the active issue; avoid drive-by refactors unless essential.
 - Respect scraping ToS/robots; throttle and identify clearly (configurable user agent).
 - Default to TypeScript, App Router, route handlers; avoid adding new stacks unless justified.
