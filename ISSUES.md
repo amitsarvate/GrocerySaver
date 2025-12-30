@@ -5,11 +5,11 @@ This file is the source of truth for the work backlog. Each top-level checkbox m
 To publish/update these as GitHub Milestones + Issues, use `scripts/github_bootstrap.sh` (requires `gh auth login`).
 
 ## Milestone: Phase 0 — Foundations
-- [ ] P0-01 Scaffold Next.js app ([#1](https://github.com/amitsarvate/GrocerySaver/issues/1))
-  - [ ] Initialize Next.js (App Router, TypeScript)
-  - [ ] Enable TypeScript strict mode
-  - [ ] Add minimal landing page + global layout shell
-  - [ ] Add a simple `/api/health` (or route handler) endpoint
+- [x] P0-01 Scaffold Next.js app ([#1](https://github.com/amitsarvate/GrocerySaver/issues/1))
+  - [x] Initialize Next.js (App Router, TypeScript)
+  - [x] Enable TypeScript strict mode
+  - [x] Add minimal landing page + global layout shell
+  - [x] Add a simple `/api/health` (or route handler) endpoint
   - Acceptance:
     - `npm run dev` starts and renders the landing page
     - Health endpoint returns 200
@@ -53,10 +53,10 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - Every PR creates a preview URL
     - Main branch deploys automatically
 
-- [ ] P0-07 Docker local hosting (app + DB + cache) ([#43](https://github.com/amitsarvate/GrocerySaver/issues/43))
-  - [ ] Add `docker-compose.yml` with Postgres/PostGIS and Redis
-  - [ ] Add app `Dockerfile` (dev-friendly) + `.dockerignore`
-  - [ ] Document local startup commands (compose up/down, reset volumes)
+- [x] P0-07 Docker local hosting (app + DB + cache) ([#43](https://github.com/amitsarvate/GrocerySaver/issues/43))
+  - [x] Add `docker-compose.yml` with Postgres/PostGIS and Redis
+  - [x] Add app `Dockerfile` (dev-friendly) + `.dockerignore`
+  - [x] Document local startup commands (compose up/down, reset volumes)
   - Acceptance:
     - `docker compose up -d db redis` starts local infra
     - App can run locally using the dockerized DB/Redis connection strings
