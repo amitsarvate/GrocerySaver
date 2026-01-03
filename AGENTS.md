@@ -21,6 +21,7 @@ Build a grocery savings web app that recommends the most cost- and distance-effi
 
 ## Dev Workflow
 - Create small, reviewable PR-sized changes per issue.
+- After completing an issue: commit changes and push to GitHub (open a PR or push to the appropriate branch) before moving on.
 - Keep env keys in `.env.local`; update `.env.example` when adding new vars.
 - Prefer server-side fetching/Server Actions for data where possible; use React Query when client state needed.
 - Tests: unit (Vitest) for utilities/engines; integration/e2e (Playwright/Cypress) for flows; include fixtures for deterministic outputs.

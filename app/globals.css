@@ -2,8 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 47.4% 11.2%;
+  --surface: 210 40% 98%;
+  --muted: 215 16% 47%;
+  --border: 214.3 31.8% 91.4%;
+  --primary: 142.1 70.6% 45.3%;
+  --primary-foreground: 144.9 80.4% 10%;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
 html,
 body {
   height: 100%;
 }
-

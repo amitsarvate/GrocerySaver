@@ -14,10 +14,10 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - `npm run dev` starts and renders the landing page
     - Health endpoint returns 200
 
-- [ ] P0-02 Add Tailwind + base UI tokens ([#2](https://github.com/amitsarvate/GrocerySaver/issues/2))
-  - [ ] Install/configure TailwindCSS
-  - [ ] Define basic design tokens (colors, spacing, typography)
-  - [ ] Add 1–2 sample components/pages using tokens
+- [x] P0-02 Add Tailwind + base UI tokens ([#2](https://github.com/amitsarvate/GrocerySaver/issues/2))
+  - [x] Install/configure TailwindCSS
+  - [x] Define basic design tokens (colors, spacing, typography)
+  - [x] Add 1–2 sample components/pages using tokens
   - Acceptance:
     - Tailwind builds with no warnings
     - Tokens visibly apply on the sample page
@@ -56,10 +56,18 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
 - [x] P0-07 Docker local hosting (app + DB + cache) ([#43](https://github.com/amitsarvate/GrocerySaver/issues/43))
   - [x] Add `docker-compose.yml` with Postgres/PostGIS and Redis
   - [x] Add app `Dockerfile` (dev-friendly) + `.dockerignore`
+  - [x] Add `.env.example` for local `DATABASE_URL`/`REDIS_URL`
   - [x] Document local startup commands (compose up/down, reset volumes)
   - Acceptance:
-    - `docker compose up -d db redis` starts local infra
+    - `docker compose up -d` starts local infra
     - App can run locally using the dockerized DB/Redis connection strings
+
+- [x] P0-08 Tidewave dev integration (dev only)
+  - [x] Add Tidewave endpoint + middleware rewrite
+  - [x] Add OpenTelemetry instrumentation hook
+  - Acceptance:
+    - `http://localhost:3000/tidewave` works in development
+    - `npm run tidewave:mcp` starts the STDIO MCP server
 
 ## Milestone: Phase 1 — Location & Store Discovery
 - [ ] P1-01 Geocoding provider integration ([#7](https://github.com/amitsarvate/GrocerySaver/issues/7))

@@ -30,6 +30,7 @@ services:
       retries: 20
 
   app:
+    profiles: ["app"]
     build:
       context: .
       dockerfile: Dockerfile
@@ -38,6 +39,7 @@ services:
       NEXT_TELEMETRY_DISABLED: "1"
       DATABASE_URL: postgresql://grocerysaver:grocerysaver@db:5432/grocerysaver
       REDIS_URL: redis://redis:6379
+      TIDEWAVE_ALLOW_REMOTE_ACCESS: "1"
       WATCHPACK_POLLING: "true"
     ports:
       - "3000:3000"
@@ -53,7 +55,7 @@ services:
       [
         "sh",
         "-lc",
-        "if [ ! -d node_modules ] || [ -z \"$(ls -A node_modules 2>/dev/null)\" ]; then npm ci || npm install; fi; npm run dev"
+        "if [ ! -d node_modules ] || [ -z \"$(ls -A node_modules 2>/dev/null)\" ]; then npm ci || npm install; else npm ls --depth=0 --silent @opentelemetry/sdk-node tidewave >/dev/null 2>&1 || npm install; fi; npm run dev"
       ]
 
 volumes:
