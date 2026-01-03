@@ -93,10 +93,10 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
   - Acceptance:
     - API returns exactly 0–5 stores with distances (deterministic ordering)
 
-- [ ] P1-04 Store list + map view ([#10](https://github.com/amitsarvate/GrocerySaver/issues/10))
-  - [ ] Render list of closest stores with distance
-  - [ ] Map pins for returned stores (Mapbox/Leaflet)
-  - [ ] Loading + error states
+- [x] P1-04 Store list + map view ([#10](https://github.com/amitsarvate/GrocerySaver/issues/10))
+  - [x] Render list of closest stores with distance
+  - [x] Map pins for returned stores (Mapbox/Leaflet)
+  - [x] Loading + error states
   - Acceptance:
     - List and map show identical stores and update on new location
 
