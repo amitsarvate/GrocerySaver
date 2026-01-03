@@ -40,9 +40,9 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - App fails fast with clear error on missing required env vars
     - Logger used by at least one route handler
 
-- [ ] P0-05 CI workflow ([#5](https://github.com/amitsarvate/GrocerySaver/issues/5))
-  - [ ] Add GitHub Actions workflow for lint + test
-  - [ ] Ensure workflow runs on push + PR
+- [x] P0-05 CI workflow ([#5](https://github.com/amitsarvate/GrocerySaver/issues/5))
+  - [x] Add GitHub Actions workflow for lint + test
+  - [x] Ensure workflow runs on push + PR
   - Acceptance:
     - CI is green on main for lint + test
 
