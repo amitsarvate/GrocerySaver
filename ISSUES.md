@@ -47,7 +47,7 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - CI is green on main for lint + test
 
 - [ ] P0-06 Preview deploy setup (live during development) ([#6](https://github.com/amitsarvate/GrocerySaver/issues/6))
-  - [ ] Choose platform (Vercel recommended)
+  - [x] Choose platform (Vercel recommended)
   - [ ] Connect GitHub repo to deployment platform
   - [ ] Confirm preview URLs on PRs + staging/prod (as desired)
   - Acceptance:

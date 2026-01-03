@@ -19,3 +19,14 @@
 
 - Web endpoint (dev only): `http://localhost:3000/tidewave`
 - STDIO MCP server: `npm run tidewave:mcp`
+
+## Preview deploys (Vercel)
+
+1. Create a new Vercel project from this GitHub repo and enable Git integration.
+2. Set required env vars for Preview + Production (even if you’re not using them yet):
+   - `DATABASE_URL`
+   - `REDIS_URL`
+   - `LOG_LEVEL` (suggested: `info` or `silent`)
+3. Confirm:
+   - every PR gets a Preview URL
+   - `main` deploys automatically
