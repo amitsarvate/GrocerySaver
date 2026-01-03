@@ -86,10 +86,10 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
   - Acceptance:
     - User can submit address OR use geolocation successfully
 
-- [ ] P1-03 Nearby store lookup API (top 5) ([#9](https://github.com/amitsarvate/GrocerySaver/issues/9))
-  - [ ] Implement Overpass/Places query for grocery stores near lat/lng
-  - [ ] Normalize store fields: name/address/lat/lng/source
-  - [ ] Compute distance and sort; return closest 5
+- [x] P1-03 Nearby store lookup API (top 5) ([#9](https://github.com/amitsarvate/GrocerySaver/issues/9))
+  - [x] Implement Overpass/Places query for grocery stores near lat/lng
+  - [x] Normalize store fields: name/address/lat/lng/source
+  - [x] Compute distance and sort; return closest 5
   - Acceptance:
     - API returns exactly 0–5 stores with distances (deterministic ordering)
 

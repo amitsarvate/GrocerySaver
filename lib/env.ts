@@ -28,6 +28,17 @@ const envSchema = z.object({
     .url()
     .optional()
     .default("https://nominatim.openstreetmap.org"),
+  OVERPASS_BASE_URL: z
+    .string()
+    .url()
+    .optional()
+    .default("https://overpass-api.de/api/interpreter"),
+  OVERPASS_THROTTLE_MS: z.coerce
+    .number()
+    .int()
+    .positive()
+    .optional()
+    .default(1100),
   TIDEWAVE_ALLOW_REMOTE_ACCESS: z.string().optional(),
 });
 
