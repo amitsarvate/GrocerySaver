@@ -79,10 +79,10 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
   - Acceptance:
     - Address → lat/lng route works with validation + good errors
 
-- [ ] P1-02 Location capture UI ([#8](https://github.com/amitsarvate/GrocerySaver/issues/8))
-  - [ ] Manual address entry form
-  - [ ] Browser geolocation (“Use my location”) option
-  - [ ] Display user’s resolved lat/lng (debug-friendly)
+- [x] P1-02 Location capture UI ([#8](https://github.com/amitsarvate/GrocerySaver/issues/8))
+  - [x] Manual address entry form
+  - [x] Browser geolocation (“Use my location”) option
+  - [x] Display user’s resolved lat/lng (debug-friendly)
   - Acceptance:
     - User can submit address OR use geolocation successfully
 

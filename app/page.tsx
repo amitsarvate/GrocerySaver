@@ -15,15 +15,20 @@ export default function Home() {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <div className="text-sm font-medium text-foreground">
-              Phase 0 in progress
+              Phase 1 in progress
             </div>
             <div className="mt-1 text-sm text-muted">
               Next: location capture, then store lookup.
             </div>
           </div>
           <div className="flex gap-2">
-            <Button type="button">Get started</Button>
-            <Button type="button" variant="ghost">
+            <Button href="/location">Get started</Button>
+            <Button
+              href="/api/health"
+              target="_blank"
+              rel="noreferrer"
+              variant="ghost"
+            >
               View health
             </Button>
           </div>
