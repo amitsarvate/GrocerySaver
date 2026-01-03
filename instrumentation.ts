@@ -4,6 +4,11 @@ import type { SpanProcessor } from "@opentelemetry/sdk-trace-base";
 export async function register() {
   if (process.env.NEXT_RUNTIME !== "nodejs") return;
 
+  const { logger } = await import("./lib/logger");
+  await import("./lib/env");
+
+  logger.info({ component: "instrumentation" }, "register");
+
   const { NodeSDK } = await import("@opentelemetry/sdk-node");
 
   const sdkConfig: {

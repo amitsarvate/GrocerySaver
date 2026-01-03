@@ -32,10 +32,10 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - `npm run lint` passes
     - `npm test` passes
 
-- [ ] P0-04 Env management + logging ([#4](https://github.com/amitsarvate/GrocerySaver/issues/4))
-  - [ ] Add `.env.example` with required variables (no secrets)
-  - [ ] Add env schema validation (e.g., Zod)
-  - [ ] Add structured logger utility (pino-style)
+- [x] P0-04 Env management + logging ([#4](https://github.com/amitsarvate/GrocerySaver/issues/4))
+  - [x] Add `.env.example` with required variables (no secrets)
+  - [x] Add env schema validation (e.g., Zod)
+  - [x] Add structured logger utility (pino-style)
   - Acceptance:
     - App fails fast with clear error on missing required env vars
     - Logger used by at least one route handler
