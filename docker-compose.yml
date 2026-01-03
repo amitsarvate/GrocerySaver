@@ -55,7 +55,7 @@ services:
       [
         "sh",
         "-lc",
-        "if [ ! -d node_modules ] || [ -z \"$(ls -A node_modules 2>/dev/null)\" ]; then npm ci || npm install; else npm ls --depth=0 --silent @opentelemetry/sdk-node tidewave >/dev/null 2>&1 || npm install; fi; npm run dev"
+        'if [ ! -d node_modules ] || [ -z "$(ls -A node_modules 2>/dev/null)" ]; then npm ci || npm install; else npm ls --depth=0 --silent @opentelemetry/sdk-node tidewave >/dev/null 2>&1 || npm install; fi; npm run dev',
       ]
 
 volumes:

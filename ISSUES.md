@@ -5,6 +5,7 @@ This file is the source of truth for the work backlog. Each top-level checkbox m
 To publish/update these as GitHub Milestones + Issues, use `scripts/github_bootstrap.sh` (requires `gh auth login`).
 
 ## Milestone: Phase 0 — Foundations
+
 - [x] P0-01 Scaffold Next.js app ([#1](https://github.com/amitsarvate/GrocerySaver/issues/1))
   - [x] Initialize Next.js (App Router, TypeScript)
   - [x] Enable TypeScript strict mode
@@ -22,11 +23,11 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - Tailwind builds with no warnings
     - Tokens visibly apply on the sample page
 
-- [ ] P0-03 Lint/format/testing baseline ([#3](https://github.com/amitsarvate/GrocerySaver/issues/3))
-  - [ ] Configure ESLint
-  - [ ] Configure Prettier
-  - [ ] Add Vitest and 1–2 sample tests
-  - [ ] Add npm scripts: `lint`, `format`, `test`
+- [x] P0-03 Lint/format/testing baseline ([#3](https://github.com/amitsarvate/GrocerySaver/issues/3))
+  - [x] Configure ESLint
+  - [x] Configure Prettier
+  - [x] Add Vitest and 1–2 sample tests
+  - [x] Add npm scripts: `lint`, `format`, `test`
   - Acceptance:
     - `npm run lint` passes
     - `npm test` passes
@@ -70,6 +71,7 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - `npm run tidewave:mcp` starts the STDIO MCP server
 
 ## Milestone: Phase 1 — Location & Store Discovery
+
 - [ ] P1-01 Geocoding provider integration ([#7](https://github.com/amitsarvate/GrocerySaver/issues/7))
   - [ ] Choose provider (Nominatim/Mapbox/Google)
   - [ ] Add server-side geocode wrapper
@@ -107,6 +109,7 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - Repeat lookup returns faster via cache
 
 ## Milestone: Phase 2 — Price/Deals Ingestion
+
 - [ ] P2-01 Select target stores + scrape configs ([#12](https://github.com/amitsarvate/GrocerySaver/issues/12))
   - [ ] Pick initial 5–8 chains for your region
   - [ ] Record source URLs and basic extraction plan per store
@@ -148,6 +151,7 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - Scraper can run with `FIXTURE_MODE=1` and produce same output
 
 ## Milestone: Phase 3 — Matching & Normalization
+
 - [ ] P3-01 Item text + unit normalization utilities ([#18](https://github.com/amitsarvate/GrocerySaver/issues/18))
   - [ ] Normalize casing, punctuation, pluralization
   - [ ] Parse quantity/unit and convert to canonical units
@@ -169,6 +173,7 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - User can resolve a low-confidence item and proceed
 
 ## Milestone: Phase 4 — Optimization Engine
+
 - [ ] P4-01 Define cost model (configurable) ([#21](https://github.com/amitsarvate/GrocerySaver/issues/21))
   - [ ] Define distance penalty and max store count parameters
   - [ ] Document defaults
@@ -196,6 +201,7 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - Tests confirm stable route order for fixtures
 
 ## Milestone: Phase 5 — Frontend Experience
+
 - [ ] P5-01 App shell + UI polish baseline ([#25](https://github.com/amitsarvate/GrocerySaver/issues/25))
   - [ ] Header/nav + responsive layout
   - [ ] Loading/skeleton patterns
@@ -230,6 +236,7 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - Basic a11y audit checks pass
 
 ## Milestone: Phase 6 — Persistence & Infra Hardening
+
 - [ ] P6-01 Redis cache integration ([#30](https://github.com/amitsarvate/GrocerySaver/issues/30))
   - [ ] Cache store queries
   - [ ] Cache basket optimization results
@@ -249,6 +256,7 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
     - Errors and key metrics are visible in a dashboard
 
 ## Milestone: Phase 7 — Beta Readiness
+
 - [ ] P7-01 Seed regions + fallback mode ([#33](https://github.com/amitsarvate/GrocerySaver/issues/33))
   - [ ] Seed sample stores/products/prices for a chosen region
   - [ ] Fallback to seeded/mock data if scrapers fail

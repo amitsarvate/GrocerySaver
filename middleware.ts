@@ -1,14 +1,13 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
 
 export function middleware(req: NextRequest): NextResponse {
-  if (req.nextUrl.pathname.startsWith('/tidewave')) {
-    return NextResponse.rewrite(new URL('/api/tidewave', req.url));
+  if (req.nextUrl.pathname.startsWith("/tidewave")) {
+    return NextResponse.rewrite(new URL("/api/tidewave", req.url));
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ['/tidewave/:path*'],
+  matcher: ["/tidewave/:path*"],
 };
-
