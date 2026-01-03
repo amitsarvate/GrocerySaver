@@ -26,6 +26,8 @@
 2. Set required env vars for Preview + Production (even if you’re not using them yet):
    - `DATABASE_URL`
    - `REDIS_URL`
+   - `GEOCODER_USER_AGENT` (required; identify your app per Nominatim policy)
+   - `GEOCODER_PROVIDER` (optional; default: `nominatim`)
    - `LOG_LEVEL` (suggested: `info` or `silent`)
 3. Confirm:
    - every PR gets a Preview URL

@@ -15,6 +15,19 @@ const envSchema = z.object({
   LOG_LEVEL: logLevelSchema.optional().default("info"),
   DATABASE_URL: z.string().min(1, "DATABASE_URL is required"),
   REDIS_URL: z.string().min(1, "REDIS_URL is required"),
+  GEOCODER_PROVIDER: z.enum(["nominatim"]).optional().default("nominatim"),
+  GEOCODER_USER_AGENT: z.string().min(1, "GEOCODER_USER_AGENT is required"),
+  GEOCODER_THROTTLE_MS: z.coerce
+    .number()
+    .int()
+    .positive()
+    .optional()
+    .default(1100),
+  NOMINATIM_BASE_URL: z
+    .string()
+    .url()
+    .optional()
+    .default("https://nominatim.openstreetmap.org"),
   TIDEWAVE_ALLOW_REMOTE_ACCESS: z.string().optional(),
 });
 

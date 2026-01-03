@@ -72,10 +72,10 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
 
 ## Milestone: Phase 1 — Location & Store Discovery
 
-- [ ] P1-01 Geocoding provider integration ([#7](https://github.com/amitsarvate/GrocerySaver/issues/7))
-  - [ ] Choose provider (Nominatim/Mapbox/Google)
-  - [ ] Add server-side geocode wrapper
-  - [ ] Add env vars + validation
+- [x] P1-01 Geocoding provider integration ([#7](https://github.com/amitsarvate/GrocerySaver/issues/7))
+  - [x] Choose provider (Nominatim/Mapbox/Google)
+  - [x] Add server-side geocode wrapper
+  - [x] Add env vars + validation
   - Acceptance:
     - Address → lat/lng route works with validation + good errors
 
