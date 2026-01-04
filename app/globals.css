@@ -18,3 +18,9 @@ html,
 body {
   height: 100%;
 }
+
+/* Leaflet map tiles use <img> elements with fixed sizes; Tailwind preflight sets img{max-width:100%}
+   which breaks tile rendering. */
+.leaflet-container img {
+  max-width: none !important;
+}
