@@ -1,8 +1,6 @@
 "use client";
 
-import "leaflet/dist/leaflet.css";
-
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import type { NearbyStore } from "../../lib/stores/types";
 
@@ -15,6 +13,7 @@ export function LeafletMap({ origin, stores }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<import("leaflet").Map | null>(null);
   const layerRef = useRef<import("leaflet").LayerGroup | null>(null);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -38,6 +37,9 @@ export function LeafletMap({ origin, stores }: Props) {
       const layer = L.layerGroup().addTo(map);
       mapRef.current = map;
       layerRef.current = layer;
+      map.setView([origin.lat, origin.lng], 13);
+      map.invalidateSize();
+      setIsReady(true);
     })();
 
     return () => {
@@ -48,13 +50,14 @@ export function LeafletMap({ origin, stores }: Props) {
         layerRef.current = null;
       }
     };
-  }, []);
+  }, [origin.lat, origin.lng]);
 
   useEffect(() => {
-    if (!mapRef.current || !layerRef.current) return;
+    if (!isReady || !mapRef.current || !layerRef.current) return;
 
     (async () => {
       const L = await import("leaflet");
+      mapRef.current!.invalidateSize();
       const layer = layerRef.current!;
       layer.clearLayers();
 
@@ -93,7 +96,7 @@ export function LeafletMap({ origin, stores }: Props) {
       const bounds = L.latLngBounds(points);
       mapRef.current!.fitBounds(bounds.pad(0.2), { maxZoom: 14 });
     })();
-  }, [origin.lat, origin.lng, stores]);
+  }, [isReady, origin.lat, origin.lng, stores]);
 
   return (
     <div
