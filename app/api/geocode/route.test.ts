@@ -42,9 +42,7 @@ describe("GET /api/geocode", () => {
       new GeocodingError("No results", "NO_RESULTS"),
     );
 
-    const request = new Request(
-      "http://localhost/api/geocode?q=Nowhere",
-    );
+    const request = new Request("http://localhost/api/geocode?q=Nowhere");
     const response = await GET(request);
     const json = await response.json();
 

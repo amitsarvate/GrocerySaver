@@ -14,9 +14,10 @@ describe("Home page", () => {
         "Find the most cost-effective grocery plan across nearby stores.",
       ),
     ).toBeInTheDocument();
-    expect(
-      screen.getByRole("link", { name: "Get started" }),
-    ).toHaveAttribute("href", "/location");
+    expect(screen.getByRole("link", { name: "Get started" })).toHaveAttribute(
+      "href",
+      "/location",
+    );
     expect(screen.getByRole("link", { name: "View health" })).toHaveAttribute(
       "href",
       "/api/health",

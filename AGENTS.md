@@ -11,9 +11,12 @@ Build a grocery savings web app that recommends the most cost- and distance-effi
 - Keep changes minimal and scoped to the active issue; avoid drive-by refactors unless essential.
 - Respect scraping ToS/robots; throttle and identify clearly (configurable user agent).
 - Default to TypeScript, App Router, route handlers; avoid adding new stacks unless justified.
-- Run lint/tests relevant to your change; add small fixtures for scraper/matcher logic.
-- Before closing any issue, run tests with coverage and ensure minimum thresholds pass (`npm run test:coverage`).
-- After creating or modifying code, keep rerunning unit/integration tests until they pass 100%; do not commit/push until they do.
+
+## Before Commit/Push
+
+- Run `npm run format:check`; if it reports issues, run `npm run format` to fix before pushing any code.
+- Run `npm run lint` and `npm run typecheck`.
+- Run `npm run test:coverage`; only commit/push after 100% pass and thresholds meet.
 
 ## Coding Standards
 
