@@ -100,10 +100,10 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
   - Acceptance:
     - List and map show identical stores and update on new location
 
-- [ ] P1-05 Store persistence + caching ([#11](https://github.com/amitsarvate/GrocerySaver/issues/11))
-  - [ ] Add `Store` Prisma model + migration
-  - [ ] Upsert stores from lookup results
-  - [ ] Cache recent store lookups (Redis or in-memory in dev)
+- [x] P1-05 Store persistence + caching ([#11](https://github.com/amitsarvate/GrocerySaver/issues/11))
+  - [x] Add `Store` Prisma model + migration
+  - [x] Upsert stores from lookup results
+  - [x] Cache recent store lookups (Redis or in-memory in dev)
   - Acceptance:
     - DB contains stores with lat/lng + last-seen timestamp
     - Repeat lookup returns faster via cache
