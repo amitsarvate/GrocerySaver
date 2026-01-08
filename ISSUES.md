@@ -110,10 +110,10 @@ To publish/update these as GitHub Milestones + Issues, use `scripts/github_boots
 
 ## Milestone: Phase 2 — Price/Deals Ingestion
 
-- [ ] P2-01 Select target stores + scrape configs ([#12](https://github.com/amitsarvate/GrocerySaver/issues/12))
-  - [ ] Pick initial 5–8 chains for your region
-  - [ ] Record source URLs and basic extraction plan per store
-  - [ ] Document ToS/robots constraints per store
+- [x] P2-01 Select target stores + scrape configs ([#12](https://github.com/amitsarvate/GrocerySaver/issues/12))
+  - [x] Pick initial 5–8 chains for your region
+  - [x] Record source URLs and basic extraction plan per store
+  - [x] Document ToS/robots constraints per store
   - Acceptance:
     - `docs/sources.md` (or similar) lists store sources + notes
 
