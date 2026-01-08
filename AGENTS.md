@@ -12,6 +12,8 @@ Build a grocery savings web app that recommends the most cost- and distance-effi
 - Respect scraping ToS/robots; throttle and identify clearly (configurable user agent).
 - Default to TypeScript, App Router, route handlers; avoid adding new stacks unless justified.
 - Run lint/tests relevant to your change; add small fixtures for scraper/matcher logic.
+- Before closing any issue, run tests with coverage and ensure minimum thresholds pass (`npm run test:coverage`).
+- After creating or modifying code, keep rerunning unit/integration tests until they pass 100%; do not commit/push until they do.
 
 ## Coding Standards
 

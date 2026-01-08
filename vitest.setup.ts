@@ -1,3 +1,5 @@
+import "@testing-library/jest-dom/vitest";
+
 process.env.DATABASE_URL ??=
   "postgresql://grocerysaver:grocerysaver@localhost:5432/grocerysaver";
 process.env.REDIS_URL ??= "redis://localhost:6379";
